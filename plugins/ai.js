@@ -12,6 +12,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}`)
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:data},{quoted:mek});
 reply(`${data.data}`)
 }catch(e){
 console.log(e)
