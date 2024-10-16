@@ -3,13 +3,14 @@ const {cmd , commands} = require('../command')
 
 cmd({
     pattern: "alive",
-    desc: "Check bot online or no.",
+    desc: "Check DENETH-MD WA-BOT Online or Offline",
+    react: "🥱",
     category: "main",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-let des = `*Hello, I am Alive Now😘*
+let des = `*Hello, I am Alive Now🥱*
 
 Type .menu To Get Bot Menu🧾
 
